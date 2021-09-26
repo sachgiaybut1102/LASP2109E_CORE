@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LASP2109E_CORE.Model;
 using LASP2109E_CORE.Enum;
+using System.Threading;
 
 namespace LASP2109E_CORE
 {
@@ -12,6 +13,7 @@ namespace LASP2109E_CORE
     {
         static void Main(string[] args)
         {
+            #region
             // PhuongTrinhBacNhat();
             //TenCuaSo();
             //TimGiaTriLonNhatCuaHaiSo();
@@ -22,8 +24,453 @@ namespace LASP2109E_CORE
             //HienThiTamGiac();
             //TongSoUoc();
             //TinhTong();
-            InDayNguoc();
+            //InDayNguoc();
+            //int a = 4; 
+            //int b = 3;
+
+            //try
+            //{
+            //    Console.Write("Nhap vao a = ");
+            //    a = int.Parse(Console.ReadLine());
+            //}
+            //catch (FormatException e)
+            //{
+            //    Console.WriteLine("Chuoi vua nhap khong phai la 1 so " + e);
+            //}
+            //catch (OverflowException e)
+            //{
+            //    Console.WriteLine("Gia tri vua nhap qua lon so voi kieu du lieu " + e);
+            //}
+
+
+            //Console.WriteLine("Truoc hoan vi: a = {0}, b = {1}", a, b);
+            //Console.Write("Khi hoan vi: ");
+            //HoanVi(ref a, ref b);
+            //Console.WriteLine("Sau hoan vi: a = {0}, b = {1}", a, b);
+            #endregion
+            //  HinhChuNhat();
+            //  HinhTron();
+            // HinhTamGiac();
+            //ThoiGian();
+
+            DanhSach();
             Console.ReadKey();
+        }
+
+        private static void DanhSach()
+        {
+            //List<T>
+            //Khởi tạo 
+            //List<int> numbers = new List<int>();
+
+            #region Thêm
+            ////Thêm một phần tử
+            //numbers.Add(1);
+            //HienThiDanhSach(numbers);
+
+            //numbers.Add(2);
+            //HienThiDanhSach(numbers);
+
+            ////Chèn 1 phần tử vào vị trí lựa chọn
+            //numbers.Insert(1, 3);
+            //HienThiDanhSach(numbers);
+
+            ////Đọc 1 phần từ
+            //Console.WriteLine("Gia tri cua phan tu co index = 1 la: {0}", numbers[1]);
+
+            ////Xử lý với nhiều phần tử
+            ////Thêm nhiều phần tử cùng lúc hoặc thêm 1 danh sách vào 
+
+            //Console.WriteLine("-------Xu ly voi nhieu phan tu--------");
+            //int[] arrNumbers = { 4, 5, 6, 7, 2 };
+
+            //numbers.AddRange(arrNumbers);
+            //HienThiDanhSach(numbers);
+            #endregion
+
+            #region
+            ////Tìm kiếm
+            ////Tìm kiếm vị trí đầu tiên của phần tử
+            //Console.WriteLine("Vi tri dau tien cua phan tu co gia tri = 2 la: {0}", numbers.IndexOf(2));
+            //Console.WriteLine("Vi tri cuoi cung cua phan tu co gia tri = 2 la: {0}", numbers.LastIndexOf(2));
+            //Console.Write("Tim tat ca cac phan tu co gia tri = 2 la: ");
+            //List<int> indexs = numbers.FindAll(t => t == 2);
+            //foreach (int i in indexs)
+            //{
+            //    Console.Write(i + " ");
+            //}
+            //Console.WriteLine();
+
+
+            ////Sắp xếp
+            ////Đưa hàm callback vào phương thức sort
+            ////Sắp xếp giảm dần
+            //numbers.Sort((num1, num2) =>
+            //{
+            //    return num1 > num2 ? -1 : ((num1 < num2) ? 1 : 0);
+            //});
+            //HienThiDanhSach(numbers);
+
+
+            ////Kiểm tra xem phần tử có được chứa trong danh sách hay không
+
+            //bool result = numbers.Contains(2);
+            //Console.WriteLine("So 2 co nam trong danh sach hay khong?: {0}", result);
+            //Console.WriteLine("So 10 co nam trong danh sach hay khong?: {0}", numbers.Contains(12));
+
+            ////Đảo ngược danh sách
+            //Console.WriteLine("Dao nguoc danh sach:");
+            //numbers.Reverse();
+            //HienThiDanhSach(numbers);
+
+            ////Chuyển đổi từ List sang mảng
+            //int[] arrConvertNumbers = numbers.ToArray();
+            //Console.WriteLine("Chuyen doi danh sach ve mang:");
+
+            //Console.WriteLine("Danh sach du lieu trong mang la: ");
+            //foreach (int number in arrConvertNumbers)
+            //{
+            //    Console.Write(number + " ");
+            //}
+            #endregion
+
+            #region Xóa
+            //Console.WriteLine("-------Xoa phan tu--------");
+            //Xóa 
+            //Xóa 1 phần tử
+            //Console.WriteLine("-------Xoa 1 phan tu--------");
+            //C1: Xóa theo đối tượng
+            //Console.WriteLine("-------Xoa theo doi tuong--------");
+            //numbers.Remove(4);
+            //HienThiDanhSach(numbers);
+            //C2: Xóa theo vị trí
+            //Console.WriteLine("-------Xoa theo vi tri--------");
+            //numbers.RemoveAt(1);
+            //HienThiDanhSach(numbers);
+
+
+            //Xóa nhiều phần tử
+            //1. Xóa nhiều phần tử theo vị trí
+            //Console.WriteLine("-------Xoa nhieu phan tu--------");
+            // numbers.RemoveRange(2,numbers.Count - 2);
+            //for(int i = 0; i < numbers.Count; i++)
+            //{
+            //    if(numbers[i] == 2)
+            //    {
+            //        numbers.RemoveRange(i, numbers.Count - i);
+            //        break;
+            //    }    
+            //}    
+            //HienThiDanhSach(numbers);
+            ////2. Xóa tất cả
+            //Console.WriteLine("-------Xoa tat ca--------");
+            //numbers.Clear();
+            //HienThiDanhSach(numbers);
+            #endregion
+
+            //BT: Viết chương trình chạy random số nguyên, tìm cả các số là số nguyên tố trong mảng
+            //và sắp xếp các số nguyên đó theo tăng dần.
+
+            //Để làm các cần dùng 1 Class có tên là Random để chạy lấy được số random
+            //VD
+            //Random random = new Random();
+            //Console.WriteLine("Random = {0}", random.Next(1, 100000));
+
+            //1. Tạo danh sách lưu trữ các số
+            List<int> numbers = new List<int>();
+
+            //2. Nhập số
+            for (int i = 0; i < 30; i++)
+            {
+                Random random = new Random();
+                numbers.Add(random.Next(1, 100000));
+                Thread.Sleep(1);
+            }
+
+            //3. Hiển thị các số vừa nhập
+            Console.WriteLine("Các số có trong danh sách là: ");
+            HienThiDanhSach(numbers);
+
+            //4. Tạo danh sách lưu các số nguyên tố
+            List<int> snts = new List<int>();
+
+            //5. Lọc ra các số là số nguyên tố có trong danh sách numbers và thêm vào danh sách snts
+            foreach (int i in numbers)
+            {
+                if (KTSNT(i))
+                {
+                    snts.Add(i);
+                }
+            }
+
+            //6. Hiển thị ra danh sách các số nguyên tố vừa tìm được được lưu trong danhsachs snts
+            Console.WriteLine("Cac so la so nguyen to co trong danh sach la: ");
+            HienThiDanhSach(snts);
+
+            //7. Sắp xếp các số nguyên tố tăng dần
+            snts.Sort();
+
+            //8. Hiển thị danh sách các số nguyên tố sau khi sắp xếp.
+            HienThiDanhSach(snts);
+
+            //Ý tiếp theo
+            //Từ danh sách các số nguyên tố từ tìm được, lọc ra các số còn lại trong danh sách
+            List<int> numbers2 = new List<int>();
+
+            foreach(int i in numbers)
+            {
+                //Kiểm tra i có tồn tại trong snts hay không,
+                //nếu không tồn tại thì nó không là snt và ta add vào numbers2
+                if(!snts.Contains(i))
+                {
+                    numbers2.Add(i);
+                }    
+            }
+
+            Console.WriteLine("Cac so khong phai la so nguyen to la: ");
+            HienThiDanhSach(numbers2);
+        }
+
+        private static bool KTSNT(int num)
+        {
+            if (num == 2)
+            {
+                return true;
+            }
+
+            for (int i = 2; i <= Math.Sqrt(num); i++)
+            {
+                if (num % i == 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private static void HienThiDanhSach(List<int> numbers)
+        {
+            Console.Write("Cac so hien co trong danh sach la: ");
+            foreach (int number in numbers)
+            {
+                Console.Write(number + " ");
+            }
+
+            Console.WriteLine();
+        }
+
+
+        private static void ThoiGian()
+        {
+            //Hiển thị thời gian hiện tại
+            Console.WriteLine("Thoi gian hien tai: {0}", DateTime.Now);
+
+            //Hiển thị các thuộc tính thời gian của một đối tượng dateTime
+            DateTime dateTime = DateTime.Now;
+
+            Console.WriteLine("Nam = {0}", dateTime.Year);
+            Console.WriteLine("Thang = {0}", dateTime.Month);
+            Console.WriteLine("Ngay = {0}", dateTime.Day);
+            Console.WriteLine("Gio = {0}", dateTime.Hour);
+            Console.WriteLine("Phut = {0}", dateTime.Minute);
+            Console.WriteLine("Giay = {0}", dateTime.Second);
+            Console.WriteLine("Ngay trong tuan = {0}", dateTime.DayOfWeek);
+            Console.WriteLine("Ngay trong nam = {0}", dateTime.DayOfYear);
+
+
+            //Tạo DateTime Truyền tham số 
+            DateTime dateTime1 = new DateTime(1998, 10, 3);
+            //Console.WriteLine("Truoc khi them thoi gian:");
+
+            //HienThoiGian(dateTime1);
+
+            //Thêm thời gian và DateTime
+            dateTime1 = dateTime1.AddMonths(100);
+            //Console.WriteLine("Sau khi them thoi gian:");
+            //HienThoiGian(dateTime1);
+
+            //So sánh thời gian
+            int result = DateTime.Compare(dateTime, dateTime1);
+            if (result == 1)
+            {
+                Console.WriteLine("{0} > {1}", dateTime.ToString(), dateTime1.ToString());
+            }
+            else if (result == -1)
+            {
+                Console.WriteLine("{0} < {1}", dateTime.ToString(), dateTime1.ToString());
+            }
+            else
+            {
+                Console.WriteLine("{0} = {1}", dateTime.ToString(), dateTime1.ToString());
+            }
+
+
+            //So sánh 2 date thông qua các toán tử
+            if (dateTime > dateTime1)
+            {
+                Console.WriteLine("{0} > {1}", dateTime.ToString(), dateTime1.ToString());
+            }
+            else if (dateTime < dateTime1)
+            {
+                Console.WriteLine("{0} < {1}", dateTime.ToString(), dateTime1.ToString());
+            }
+            else
+            {
+                Console.WriteLine("{0} = {1}", dateTime.ToString(), dateTime1.ToString());
+            }
+
+            //Định dạng cho thời gian
+            //Định dạng theo ngày tháng năm
+
+            Console.WriteLine("Đinh dang theo ngày Viet: {0}", dateTime.ToString("dd/MM/yyyy"));
+            Console.WriteLine("Đinh dang ngay thang nam gio phut giay theo ngày Viet: {0}", dateTime.ToString("dd/MM/yyyy HH:mm:ss"));
+        }
+
+        private static void HienThoiGian(DateTime dateTime)
+        {
+            Console.WriteLine("Nam = {0}", dateTime.Year);
+            Console.WriteLine("Thang = {0}", dateTime.Month);
+            Console.WriteLine("Ngay = {0}", dateTime.Day);
+            Console.WriteLine("Gio = {0}", dateTime.Hour);
+            Console.WriteLine("Phut = {0}", dateTime.Minute);
+            Console.WriteLine("Giay = {0}", dateTime.Second);
+            Console.WriteLine("Ngay trong tuan = {0}", dateTime.DayOfWeek);
+            Console.WriteLine("Ngay trong nam = {0}", dateTime.DayOfYear);
+        }
+
+        private static void ChuanHoaTen()
+        {
+            string hoTen = "";
+
+            Console.Write("Nhap vao ho ten: ");
+            hoTen = Console.ReadLine();
+
+
+            //Chuẩn hóa dữ liệu
+            //B1: Đưa tất cả về viết thường và Xóa khoảng trắng ở 2 đầu chuỗi
+            hoTen = hoTen.ToLower().Trim();
+
+            //B2: Xóa các khoảng trắng thừa ở giữa 2 từ
+            //B3: Viết xóa ký tự đầu
+            string[] strArr = hoTen.Split(' ').ToArray();
+
+            hoTen = "";
+
+            foreach (string str in strArr)
+            {
+                if (String.IsNullOrEmpty(str))
+                {
+                    continue;
+                }
+
+                string str0 = str.Trim();
+
+                if (str0.Length > 1)
+                {
+                    hoTen += str0[0].ToString().ToUpper() + str0.Substring(1) + " ";
+                }
+                else
+                {
+                    hoTen = str0;
+                }
+            }
+
+            Console.WriteLine("Ho ten sau khi duoc chuan hoa la: {0}", hoTen);
+        }
+
+        private static void HinhTamGiac()
+        {
+            double a = Nhap("Canh a");
+            double b = Nhap("Canh b");
+            double c = Nhap("Canh c");
+
+            if ((a + b > c) && (a + c > b) && (b + c > a))
+            {
+                Console.WriteLine("Dien tich tam giac la: {0}", DienTichTamGiac(a, b, c));
+            }
+            else
+            {
+                Console.WriteLine("So do 3 canh vua nhap khong phai la do dai 3 canh cua 1 tam giac!");
+            }
+        }
+
+        private static double ChuViTamGiac(double a, double b, double c)
+        {
+            return a + b + c;
+        }
+
+        private static double DienTichTamGiac(double a, double b, double c)
+        {
+            double nuaChuVi = ChuViTamGiac(a, b, c) / 2;
+
+            return Math.Sqrt(nuaChuVi * (nuaChuVi - a) * (nuaChuVi - b) * (nuaChuVi - c));
+        }
+
+        private static void HinhTron()
+        {
+            double r = Nhap("Ban kinh r");
+
+            Console.WriteLine("Chu vi hình tron la: 2 * pi * {0}", r, ChuViHinhTron(r));
+            Console.WriteLine("Dien tich hinh tron la: pi * {0}^2 = {1}", r, DienTichHinhTron(r));
+        }
+
+        private static double ChuViHinhTron(double r)
+        {
+            return 2 * Math.PI * r;
+        }
+
+        private static double DienTichHinhTron(double r)
+        {
+            return Math.PI * Math.Pow(r, 2);
+        }
+
+        private static void HinhChuNhat()
+        {
+            double chieuDai = Nhap("Chieu dai");
+            double chieuRong = Nhap("Chieu rong");
+
+            Console.WriteLine("Chu vi hinh chu nhat la: 2 * ({0} + {1}) = {2}", chieuDai, chieuRong, ChuViHinhChuNhat(chieuDai, chieuRong));
+            Console.WriteLine("Dien tich hinh chu nhat la: {0} * {1} = {2}", chieuDai, chieuRong, DienTichHinhChuNhat(chieuDai, chieuRong));
+        }
+
+        private static double ChuViHinhChuNhat(double chieuDai, double chieuRong)
+        {
+            return 2 * (chieuDai + chieuRong);
+        }
+
+        private static double DienTichHinhChuNhat(double chieuDai, double chieuRong)
+        {
+            return chieuDai * chieuRong;
+        }
+
+        private static double Nhap(string tieuDe)
+        {
+            double num;
+
+        NHAP:
+            try
+            {
+                Console.Write("{0} = ", tieuDe);
+                num = double.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Co loi xay ra, vui long nhap lai!");
+
+                goto NHAP;
+            }
+
+            return num;
+        }
+
+        private static void HoanVi(ref int a, ref int b)
+        {
+            int tam = a;
+            a = b;
+            b = tam;
+
+            Console.WriteLine("a = {0}, b = {1}", a, b);
         }
 
         private static void InDayNguoc()

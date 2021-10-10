@@ -6,55 +6,30 @@ using System.Threading.Tasks;
 using LASP2109E_CORE.Model;
 using LASP2109E_CORE.Enum;
 using System.Threading;
+using LASP2109E_CORE.BTHinh;
 
 namespace LASP2109E_CORE
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            #region
-            // PhuongTrinhBacNhat();
-            //TenCuaSo();
-            //TimGiaTriLonNhatCuaHaiSo();
-            //TimGiaTriLonNhatCuaBaSo();
-            //HienThiABC();
-            // HienThiABCDungFor();
-            //TongSoChan();
-            //HienThiTamGiac();
-            //TongSoUoc();
-            //TinhTong();
-            //InDayNguoc();
-            //int a = 4; 
-            //int b = 3;
+            MainHinh mainHinh = new MainHinh();
+            mainHinh.Run();
 
-            //try
-            //{
-            //    Console.Write("Nhap vao a = ");
-            //    a = int.Parse(Console.ReadLine());
-            //}
-            //catch (FormatException e)
-            //{
-            //    Console.WriteLine("Chuoi vua nhap khong phai la 1 so " + e);
-            //}
-            //catch (OverflowException e)
-            //{
-            //    Console.WriteLine("Gia tri vua nhap qua lon so voi kieu du lieu " + e);
-            //}
-
-
-            //Console.WriteLine("Truoc hoan vi: a = {0}, b = {1}", a, b);
-            //Console.Write("Khi hoan vi: ");
-            //HoanVi(ref a, ref b);
-            //Console.WriteLine("Sau hoan vi: a = {0}, b = {1}", a, b);
-            #endregion
-            //  HinhChuNhat();
-            //  HinhTron();
-            // HinhTamGiac();
-            //ThoiGian();
-
-            DanhSach();
             Console.ReadKey();
+        }
+
+        private static void passByValue(int num)
+        {
+            num++;
+            Console.WriteLine("value in process = " + num);
+        }
+
+        private static void passByReference(ref int num)
+        {
+            num++;
+            Console.WriteLine("value in process = " + num);
         }
 
         private static void DanhSach()
@@ -217,14 +192,14 @@ namespace LASP2109E_CORE
             //Từ danh sách các số nguyên tố từ tìm được, lọc ra các số còn lại trong danh sách
             List<int> numbers2 = new List<int>();
 
-            foreach(int i in numbers)
+            foreach (int i in numbers)
             {
                 //Kiểm tra i có tồn tại trong snts hay không,
                 //nếu không tồn tại thì nó không là snt và ta add vào numbers2
-                if(!snts.Contains(i))
+                if (!snts.Contains(i))
                 {
                     numbers2.Add(i);
-                }    
+                }
             }
 
             Console.WriteLine("Cac so khong phai la so nguyen to la: ");

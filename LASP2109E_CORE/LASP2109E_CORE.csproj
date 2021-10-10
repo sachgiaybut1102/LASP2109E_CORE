@@ -58,11 +58,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BTHinh\Hinh.cs" />
+    <Compile Include="BTHinh\HinhChuNhat.cs" />
+    <Compile Include="BTHinh\HinhTron.cs" />
+    <Compile Include="BTHinh\HinhVuong.cs" />
+    <Compile Include="BTHinh\HinhTamGiac.cs" />
+    <Compile Include="BTHinh\MainHinh.cs" />
+    <Compile Include="Cat.cs" />
+    <Compile Include="ConEch.cs" />
     <Compile Include="Enum\ENumCan.cs" />
     <Compile Include="Enum\ENumChi.cs" />
+    <Compile Include="IConEch.cs" />
+    <Compile Include="IDongVatDuoiNuoc.cs" />
+    <Compile Include="IDongVatTrenCan.cs" />
+    <Compile Include="ISuTu.cs" />
     <Compile Include="Model\StudentInfo.cs" />
+    <Compile Include="PhanSo.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoPhuc.cs" />
+    <Compile Include="SuTu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

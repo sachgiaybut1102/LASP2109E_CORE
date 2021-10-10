@@ -58,6 +58,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BTCanBo\CanBo.cs" />
+    <Compile Include="BTCanBo\CongNhan.cs" />
+    <Compile Include="BTCanBo\KySu.cs" />
+    <Compile Include="BTCanBo\NhanVien.cs" />
+    <Compile Include="BTCanBo\QLCB.cs" />
     <Compile Include="BTHinh\Hinh.cs" />
     <Compile Include="BTHinh\HinhChuNhat.cs" />
     <Compile Include="BTHinh\HinhTron.cs" />

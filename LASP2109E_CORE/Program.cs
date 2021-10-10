@@ -14,8 +14,8 @@ namespace LASP2109E_CORE
     {
         private static void Main(string[] args)
         {
-            BTTuyenSinh.TuyenSinh tuyenSinh = new BTTuyenSinh.TuyenSinh();
-            tuyenSinh.Run();
+            BTCanBo.QLCB qLCB = new BTCanBo.QLCB();
+            qLCB.Run();
 
             Console.ReadKey();
         }

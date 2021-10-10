@@ -64,10 +64,16 @@
     <Compile Include="BTHinh\HinhVuong.cs" />
     <Compile Include="BTHinh\HinhTamGiac.cs" />
     <Compile Include="BTHinh\MainHinh.cs" />
+    <Compile Include="BTTuyenSinh\ThiSinh.cs" />
+    <Compile Include="BTTuyenSinh\ThiSinhKhoiA.cs" />
+    <Compile Include="BTTuyenSinh\ThiSinhKhoiB.cs" />
+    <Compile Include="BTTuyenSinh\ThiSinhKhoiC.cs" />
+    <Compile Include="BTTuyenSinh\TuyenSinh.cs" />
     <Compile Include="Cat.cs" />
     <Compile Include="ConEch.cs" />
     <Compile Include="Enum\ENumCan.cs" />
     <Compile Include="Enum\ENumChi.cs" />
+    <Compile Include="GetInputCommon.cs" />
     <Compile Include="IConEch.cs" />
     <Compile Include="IDongVatDuoiNuoc.cs" />
     <Compile Include="IDongVatTrenCan.cs" />
